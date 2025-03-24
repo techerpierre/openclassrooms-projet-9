@@ -3,6 +3,7 @@
 .SlideCardList {
   position: relative;
   width: 100%;
+  overflow: hidden;
   max-width: 1440px;
   height: 586px;
   .SlideCard {

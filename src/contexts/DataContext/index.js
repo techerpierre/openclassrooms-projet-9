@@ -26,6 +26,8 @@ export const DataProvider = ({ children }) => {
       setError(err);
     }
   }, []);
+  const last = data?.focus?.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+
   useEffect(() => {
     if (data) return;
     getData();
@@ -36,6 +38,7 @@ export const DataProvider = ({ children }) => {
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         data,
+        last,
         error,
       }}
     >

@@ -14,9 +14,6 @@ const EventList = () => {
   const [type, setType] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const firstElement = (currentPage - 1) * PER_PAGE;
-  /*
-    !!! Séparer les events filtrés et les events paginés !!!
-  */
   const filteredEvents = (data?.events || []).filter((el) =>
     type ? el.type === type : true
   );

@@ -26,7 +26,7 @@ export const DataProvider = ({ children }) => {
       setError(err);
     }
   }, []);
-  const last = data?.focus?.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+  const last = data?.events?.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
 
   useEffect(() => {
     if (data) return;
